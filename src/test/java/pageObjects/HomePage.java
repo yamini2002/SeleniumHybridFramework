@@ -4,31 +4,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
-	
-	public HomePage(WebDriver driver)
-	{
+	public HomePage(WebDriver driver) {
 		super(driver);
 	}
-	
-@FindBy(xpath="//span[normalize-space()='My Account']") 
-WebElement lnkMyaccount;
 
-@FindBy(xpath="//a[normalize-space()='Register']") 
-WebElement lnkRegister;
+	@FindBy(xpath = "//span[normalize-space()='My Account']")
+	WebElement lnkMyaccount;
 
+	@FindBy(xpath = "//a[normalize-space()='Register']")
+	WebElement lnkRegister;
 
+	@FindBy(xpath = "//div[@id =\'top-links\']/ul/li[2]/ul/li[2]/a")
+	WebElement lnkLogin;
 
-public void clickMyAccount()
-{
-	lnkMyaccount.click();
+	public void clickMyAccount() {
+		lnkMyaccount.click();
+	}
+
+	public void clickRegister() {
+		lnkRegister.click();
+	}
+
+	public void ClickLogin() {
+		lnkLogin.click();
+	}
 }
-
-public void clickRegister()
-{
-	lnkRegister.click();
-}
-
-}
-
