@@ -18,6 +18,7 @@ public class TC003_AccountLogoutTest extends BaseClass{
 		LogoutPage lp = new LogoutPage(driver);
 		lp.clickLogout();
 	
+		//Validating logout confirmation message
 		String logoutmsg=lp.logoutConfirmationMsg();
 		Assert.assertEquals(logoutmsg, "Account Logout");
 		System.out.println("Account Logout");

@@ -19,14 +19,17 @@ public class HomePage extends BasePage {
 	@FindBy(xpath = "//div[@id =\'top-links\']/ul/li[2]/ul/li[2]/a")
 	WebElement lnkLogin;
 
+	// Click on "My Account" to open the dropdown
 	public void clickMyAccount() {
 		lnkMyaccount.click();
 	}
 
+	// Click on "Register" to navigate to the registration page
 	public void clickRegister() {
 		lnkRegister.click();
 	}
 
+	// Click on "Login" to navigate to the login page
 	public void ClickLogin() {
 		lnkLogin.click();
 	}

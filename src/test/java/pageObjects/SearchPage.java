@@ -21,16 +21,18 @@ public class SearchPage extends BasePage {
 	@FindBy(xpath = "//input[@type='button']/following-sibling::h2")
 	WebElement msg;
 
+	// Method to enter text into the search box
 	public void setSearch(String search) {
-
 		a.moveToElement(txtSearch).click().build().perform();
 		txtSearch.sendKeys(search);
 	}
 
+	// Method to click on the search button
 	public void clickSearch() {
 		a.moveToElement(btnSearch).click().build().perform();
 	}
 
+	// Method to retrieve the confirmation message or product name from search results
 	public String searchConfirmationMsg() {
 		try {
 			return (msg.getText());
