@@ -9,6 +9,7 @@ public class BasePage {
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
+		//Automatically initializes and avoids manually initializing each element.
 		PageFactory.initElements(driver, this);
 	}
 
