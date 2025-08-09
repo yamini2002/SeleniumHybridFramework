@@ -20,8 +20,8 @@ public class TC002_AccountLoginTest extends BaseClass {
 
 		// Create LoginPage object and perform login
 		LoginPage lp = new LoginPage(driver);
-		lp.getEmail("yaminik@gmail.com");
-		lp.getPassword("test@123");
+		lp.getEmail(p.getProperty("email"));
+		lp.getPassword(p.getProperty("password"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// for verification whether data was successfully entered.
 		lp.clickSumbit();
 	}
