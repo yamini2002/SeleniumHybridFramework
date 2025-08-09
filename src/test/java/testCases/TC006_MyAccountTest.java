@@ -13,10 +13,10 @@ public class TC006_MyAccountTest extends BaseClass {
 		// Get and print the number of links
 		AccountPage ap = new AccountPage(driver);
 		int linkCount = ap.getContentLinksCount();
-        System.out.println("Total links on My Account page: " + linkCount);
-        // Print the text of each link
+		System.out.println("Total links on My Account page: " + linkCount);
+		// Print the text of each link
 		ap.printAllLinkTexts();
 		// Click and verify each link
-        ap.openAndVerifyAllLinks();
+		ap.openAndVerifyAllLinks();
 	}
 }
